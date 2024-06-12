@@ -1,31 +1,20 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  "use strict";
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
-
-  const productsAccordion = document.querySelector("div#productsAccordion");
-  const addNewBtn = document.querySelector("#addNewProduct");
-
-  function templatePreparer(itemNumber) {
-    let productAccordionTemplate = `<div class="accordion-item">
+<div class="accordion-item">
     <h2 class="accordion-header">
       <button
         class="accordion-button"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#accordionPanel${itemNumber}"
+        data-bs-target="#panelsStayOpen-collapseOne"
         aria-expanded="true"
-        aria-controls="accordionPanel${itemNumber}"
+        aria-controls="panelsStayOpen-collapseOne"
       >
-        Item #${itemNumber}
+        Item #1
 
         <!-- Accordian Heading Text-->
         <!-- <span class="d-flex justify-content-between w-100 me-3" style="max-width: 40em;">
         <span type="button" class="btn btn-danger btn-sm d-flex align-items-center rounded-pill"
           aria-pressed="false">
-          <img class="bi bi-bag-plus opacity-50" src="/assets/icons/bag-x-fill.svg" alt="+">
+          <img class="bi bi-bag-plus opacity-50" src="assets/icons/bag-x-fill.svg" alt="+">
         </span>
         Item #1
       </span> -->
@@ -34,7 +23,7 @@
     </h2>
 
     <div
-      id="accordionPanel${itemNumber}"
+      id="panelsStayOpen-collapseOne"
       class="accordion-collapse collapse show"
     >
       <div class="accordion-body">
@@ -166,39 +155,3 @@
       </div>
     </div>
   </div>
-`;
-
-    return productAccordionTemplate;
-  }
-
-  addNewBtn.addEventListener("click", (e) => {
-    // productsAccordion.appendChild(productAccordionTemplate)
-
-    productsAccordion.innerHTML += templatePreparer(
-      productsAccordion.children.length
-    );
-
-    e.preventDefault();
-    e.stopPropagation();
-  });
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        // if (!form.checkValidity()) {
-        //   event.preventDefault();
-        //   event.stopPropagation();
-        // }
-
-        // form.classList.add("was-validated");
-
-        alert("Sale Registered !!");
-
-        window.location.reload();
-      },
-      false
-    );
-  });
-})();

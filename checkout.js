@@ -6,6 +6,7 @@
   const forms = document.querySelectorAll(".needs-validation");
 
   const productsAccordion = document.querySelector("div#productsAccordion");
+  const productsCartList = document.querySelector("ul#productCartListUl");
   const addNewBtn = document.querySelector("#addNewProduct");
 
   function templatePreparer(itemNumber) {
@@ -171,11 +172,25 @@
     return productAccordionTemplate;
   }
 
+  function cartTempPreparer(itemNumber) {
+    let liTemplate = `<li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Item #${itemNumber}</h6>
+                  // <small class="text-body-secondary">Brief description</small>
+                </div>
+                <span class="text-body-secondary">&#x20b9; 12</span>
+              </li>`;
+  }
+
   addNewBtn.addEventListener("click", (e) => {
     // productsAccordion.appendChild(productAccordionTemplate)
 
     productsAccordion.innerHTML += templatePreparer(
-      productsAccordion.children.length
+      productsAccordion.children.length + 1
+    );
+
+    productsCartList.innerHTML += cartTempPreparer(
+      productsCartList.children.length + 1
     );
 
     e.preventDefault();

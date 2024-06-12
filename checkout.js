@@ -196,10 +196,7 @@
       productsCartList.children.length
     );
 
-    totalBillingCost.innerText == ""
-      ? (totalBillingCost.innerText = "12")
-      : (totalBillingCost.innerText =
-          new Number(totalBillingCost.innerText) + 12);
+    totalBillingCost.innerText = new Number(totalBillingCost.innerText) + 12;
 
     e.preventDefault();
     e.stopPropagation();

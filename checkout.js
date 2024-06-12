@@ -7,6 +7,7 @@
 
   const productsAccordion = document.querySelector("div#productsAccordion");
   const productsCartList = document.querySelector("ul#productCartListUl");
+  const totalBillingCost = document.querySelector("span#totalBillingCash");
   const addNewBtn = document.querySelector("#addNewProduct");
 
   function templatePreparer(itemNumber) {
@@ -192,8 +193,13 @@
     );
 
     productsCartList.innerHTML += cartTempPreparer(
-      productsCartList.children.length + 1
+      productsCartList.children.length
     );
+
+    totalBillingCost.innerText == ""
+      ? (totalBillingCost.innerText = "12")
+      : (totalBillingCost.innerText =
+          new Number(totalBillingCost.innerText) + 12);
 
     e.preventDefault();
     e.stopPropagation();

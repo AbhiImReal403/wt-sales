@@ -180,6 +180,8 @@
                 </div>
                 <span class="text-body-secondary">&#x20b9; 12</span>
               </li>`;
+
+              return liTemplate
   }
 
   addNewBtn.addEventListener("click", (e) => {

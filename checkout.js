@@ -149,7 +149,7 @@
                             >
                             <img
                               class="mx-2 bi bi-bag-plus opacity-50"
-                              src="/assets/icons/bag-x-fill.svg"
+                              src="assets/icons/bag-x-fill.svg"
                               alt="+"
                             />
                           </span>
@@ -167,9 +167,6 @@
               </div>
   `;
 
-  
-
-
   addNewBtn.addEventListener("click", (e) => {
     // productsAccordion.appendChild(productAccordionTemplate)
 
@@ -184,12 +181,16 @@
     form.addEventListener(
       "submit",
       (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+        // if (!form.checkValidity()) {
+        //   event.preventDefault();
+        //   event.stopPropagation();
+        // }
 
-        form.classList.add("was-validated");
+        // form.classList.add("was-validated");
+
+        alert("Sale Registered !!");
+
+        window.location.reload();
       },
       false
     );

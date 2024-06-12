@@ -307,7 +307,7 @@
               >
                 <img
                   class="bi bi-bag-plus me-2 opacity-50"
-                  src="/assets/icons/bag-plus-fill.svg"
+                  src="assets/icons/bag-plus-fill.svg"
                   alt="+"
                 />
                 Add New
@@ -331,7 +331,7 @@
                     <!-- <span class="d-flex justify-content-between w-100 me-3" style="max-width: 40em;">
                     <span type="button" class="btn btn-danger btn-sm d-flex align-items-center rounded-pill"
                       aria-pressed="false">
-                      <img class="bi bi-bag-plus opacity-50" src="/assets/icons/bag-x-fill.svg" alt="+">
+                      <img class="bi bi-bag-plus opacity-50" src="assets/icons/bag-x-fill.svg" alt="+">
                     </span>
                     Item #1
                   </span> -->
@@ -456,7 +456,7 @@
                             >
                             <img
                               class="mx-2 bi bi-bag-plus opacity-50"
-                              src="/assets/icons/bag-x-fill.svg"
+                              src="assets/icons/bag-x-fill.svg"
                               alt="+"
                             />
                           </span>
@@ -474,31 +474,17 @@
               </div>
             </div>
 
-            
+            <hr class="my-4" />
 
             <form class="needs-validation" novalidate>
               <div class="row g-3">
-                <div class="col-12">
+                <!-- <div class="col-12">
                   <label for="productItem" class="form-label">Product</label>
-                  <input
-                    class="form-control"
-                    list="datalistProductOptions"
-                    id="productItem"
-                    placeholder="Type to search..."
-                    required
-                  />
-                  <datalist id="datalistProductOptions">
-                    <option value="San Francisco"></option>
-                    <option value="New York"></option>
-                    <option value="Seattle"></option>
-                    <option value="Los Angeles"></option>
-                    <option value="Chicago"></option>
-                  </datalist>
 
-                  <!-- <select class="form-select" id="country" required>
+                  <select class="form-select" id="country" required>
                   <option value="">Choose...</option>
                   <option>United States</option>
-                </select> -->
+                </select>
                   <div class="invalid-feedback">
                     Please select a valid country.
                   </div>
@@ -592,20 +578,35 @@
                     id="address2"
                     placeholder="Apartment or suite"
                   />
-                </div>
+                </div> -->
 
-                <div class="col-md-5">
-                  <label for="country" class="form-label">Country</label>
+                <div class="col-md-6">
+                  <label for="country" class="form-label">Payment Type</label>
                   <select class="form-select" id="country" required>
                     <option value="">Choose...</option>
-                    <option>United States</option>
+                    <option>Online Payment</option>
+                    <option>Cash</option>
+                    <option>Cash + Online</option>
+                    <option>Other</option>
                   </select>
                   <div class="invalid-feedback">
                     Please select a valid country.
                   </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-12">
+                  <label for="otherNotes" class="form-label"
+                    >Notes
+                    <span class="text-body-secondary">(Optional)</span></label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="otherNotes"
+                    rows="3"
+                  ></textarea>
+                </div>
+
+                <!-- <div class="col-md-4">
                   <label for="state" class="form-label">State</label>
                   <select class="form-select" id="state" required>
                     <option value="">Choose...</option>
@@ -626,10 +627,10 @@
                     required
                   />
                   <div class="invalid-feedback">Zip code required.</div>
-                </div>
+                </div> -->
               </div>
 
-              <hr class="my-4" />
+              <!-- <hr class="my-4" /> -->
 
               <!-- <div class="form-check">
               <input type="checkbox" class="form-check-input" id="same-address">
@@ -710,7 +711,6 @@
                 Continue to checkout
               </button>
             </form>
-            
           </div>
 
           <!-- Sale Form Ending-->
